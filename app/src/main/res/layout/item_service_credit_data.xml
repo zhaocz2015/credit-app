@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="信用是无形的力量和财富 "
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="发表时间：2014-09-23　　　来源：盘锦文明网 "
+        android:textColor="@color/gray_7f"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:text="他是一位普通共产党员，却在平凡的岗位上谱写了一曲带领群众致富的动人乐章。13年来，他兢兢业业，无私奉献，全身心投入水产养殖和科研工作，不仅创办了农村产业化龙头企业，更带领乡亲们走上了幸福美满的康庄大道。"
+        android:textSize="12sp" />
+</LinearLayout>

@@ -54,6 +54,12 @@ dependencies {
     // clear-edit-text
     compile 'com.optimus:editTextField:0.2.0'
 
+    // 3d-cloud-tags
+    compile 'com.moxun:tagcloudlib:1.2.0'
+
+    // tagview-layout
+    compile 'co.lujun:androidtagview:1.0.3'
+
     //material-drawer
 //    compile('com.mikepenz:materialdrawer:5.5.0@aar') {
 //        transitive = true

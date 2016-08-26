@@ -116,7 +116,7 @@ public class Main2Fragment extends BeamFragment {
         });
 
         newsRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
-        DividerDecoration itemDecoration = new DividerDecoration(Color.parseColor("#c7c7c7"), Util.dip2px(getContext(), 0.5f), 0, 0);
+        DividerDecoration itemDecoration = new DividerDecoration(Color.parseColor("#dddddd"), Util.dip2px(getContext(), 0.5f), 0, 0);
         newsRecycler.addItemDecoration(itemDecoration);
         newsRecycler.setAdapter(newsAdapter);
 

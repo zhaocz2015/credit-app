@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@color/dc1929" android:state_selected="true" />
+    <item android:drawable="@color/red_dc1929" android:state_selected="true" />
     <item android:drawable="@color/e0e0e0" />
 </selector>
