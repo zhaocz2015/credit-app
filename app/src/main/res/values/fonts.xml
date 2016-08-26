@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--back 返回按钮 -->
+    <string name="ic_back">&#xe600;</string>
+    <!-- 首页 -->
+    <string name="ic_main">&#xe601;</string>
+    <!-- 互动交流 -->
+    <string name="ic_interact">&#xe602;</string>
+    <!-- 个人 -->
+    <string name="ic_user">&#xe603;</string>
+    <!-- 服务 -->
+    <string name="ic_service">&#xe604;</string>
+
+    <!-- 信用曝光台 -->
+    <string name="ic_creadit_exposure">&#xe605;</string>
+    <!-- 重大案例 -->
+    <string name="ic_big_case">&#xe606;</string>
+    <!-- 信用知识库 -->
+    <string name="ic_mind_lib">&#xe607;</string>
+    <!-- 法律法规 -->
+    <string name="ic_law_regula">&#xe608;</string>
+
+    <!-- 更多 -->
+    <string name="ic_view_more">&#xe609;</string>
+    <!-- 新闻TAG -->
+    <string name="ic_news_tag">&#xe60a;</string>
+    <!-- 动态TAG -->
+    <string name="ic_trend_tag">&#xe60b;</string>
+
+    <!-- 诚信企业 -->
+    <string name="ic_main_credit_ents">&#xe610;</string>
+    <!-- 信用曝光 -->
+    <string name="ic_main_credit_expose">&#xe60f;</string>
+    <!-- 案例公示 -->
+    <string name="ic_main_case_show">&#xe615;</string>
+    <!-- 法律法规 -->
+    <string name="ic_main_law_regula">&#xe61a;</string>
+    <!-- 部门规章 -->
+    <string name="ic_main_dept_regula">&#xe616;</string>
+    <!-- 行政法规 -->
+    <string name="ic_main_gov_regula">&#xe613;</string>
+    <!-- 信用动态 -->
+    <string name="ic_main_credit_trend">&#xe617;</string>
+    <!-- 信用要闻 -->
+    <string name="ic_main_credit_news">&#xe60d;</string>
+    <!-- 图片新闻 -->
+    <string name="ic_main_pic_news">&#xe618;</string>
+    <!-- 信用知识 -->
+    <string name="ic_main_credit_things">&#xe60e;</string>
+    <!-- 信用查询 -->
+    <string name="ic_main_credit_search">&#xe614;</string>
+    <!-- 资料查询 -->
+    <string name="ic_main_data_search">&#xe61b;</string>
+    <!-- 信用申诉 -->
+    <string name="ic_main_credit_report">&#xe612;</string>
+    <!-- 举报投诉 -->
+    <string name="ic_main_complain_report">&#xe619;</string>
+    <!-- 通知公告 -->
+    <string name="ic_main_notice_tip">&#xe611;</string>
+
+</resources>

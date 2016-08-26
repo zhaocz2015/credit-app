@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">公众信用</string>
+
+    <!-- 首页底部标签 -->
+    <string name="main_tab_title_main">首页</string>
+    <string name="main_tab_title_service">信用服务</string>
+    <string name="main_tab_title_interact">互动交流</string>
+    <string name="main_tab_title_user">个人</string>
+
+</resources>

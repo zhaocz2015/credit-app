@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <com.wfzcx.credit.ui.FontTextView
+        android:id="@+id/fiv_news_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="4dp"
+        android:text="@string/ic_news_tag"
+        android:textColor="#1195db"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_news_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="6dp"
+        android:text="2016-08-26" />
+
+    <TextView
+        android:id="@+id/tv_news_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/tv_news_date"
+        android:layout_toRightOf="@id/fiv_news_tag"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="潍坊：诚信体系建设纳入市委督办重点事项" />
+
+
+</RelativeLayout>
