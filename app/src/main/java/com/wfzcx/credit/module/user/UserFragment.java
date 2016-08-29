@@ -2,16 +2,13 @@ package com.wfzcx.credit.module.user;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.jude.beam.bijection.BeamFragment;
 import com.wfzcx.credit.R;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -24,11 +21,6 @@ import butterknife.ButterKnife;
  */
 public class UserFragment extends BeamFragment {
 
-    @BindView(R.id.toolbar_title)
-    TextView toolbarTitle;
-    @BindView(R.id.toolbar)
-    Toolbar toolbar;
-
     private View rootView;
 
     @Nullable
@@ -39,15 +31,9 @@ public class UserFragment extends BeamFragment {
             rootView = inflater.inflate(R.layout.fragment_user, container, false);
             ButterKnife.bind(this, rootView);
 
-            initToolbar();
         }
 
         return rootView;
-    }
-
-    private void initToolbar() {
-        toolbar.setNavigationIcon(null);
-        toolbarTitle.setText(R.string.main_tab_title_user);
     }
 
 }

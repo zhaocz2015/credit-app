@@ -59,4 +59,62 @@
     <!-- 通知公告 -->
     <string name="ic_main_notice_tip">&#xe611;</string>
 
+    <!--删除 -->
+    <string name="ic_remove">&#xe61c;</string>
+
+    <!-- 查看 -->
+    <string name="ic_view">&#xe61e;</string>
+    <!-- 关注 -->
+    <string name="ic_star">&#xe61d;</string>
+
+    <!-- 电话 -->
+    <string name="ic_phone">&#xe620;</string>
+    <!-- 邮件 -->
+    <string name="ic_email">&#xe627;</string>
+    <!-- 网址 -->
+    <string name="ic_website">&#xe62d;</string>
+    <!-- 地址 -->
+    <string name="ic_addr">&#xe61f;</string>
+    <!-- 工商信息 -->
+    <string name="ic_gsxx">&#xe62b;</string>
+    <!-- 投资关系 -->
+    <string name="ic_tzgx">&#xe621;</string>
+    <!-- 企业年报 -->
+    <string name="ic_qynb">&#xe628;</string>
+    <!-- 企业图谱 -->
+    <string name="ic_qytp">&#xe62a;</string>
+    <!-- 发展历程 -->
+    <string name="ic_fzlc">&#xe622;</string>
+    <!-- 疑似关系 -->
+    <string name="ic_ysgx">&#xe624;</string>
+    <!-- 法院公告 -->
+    <string name="ic_fygg">&#xe623;</string>
+    <!-- 被执行人 -->
+    <string name="ic_bzxr">&#xe626;</string>
+    <!-- 失信信息 -->
+    <string name="ic_sxxx">&#xe625;</string>
+    <!-- 裁判文书 -->
+    <string name="ic_cpws">&#xe62e;</string>
+    <!-- 经营异常 -->
+    <string name="ic_jyyc">&#xe623;</string>
+    <!-- 行政处罚 -->
+    <string name="ic_xzcf">&#xe629;</string>
+    <!-- 专利 -->
+    <string name="ic_zl">&#xe635;</string>
+    <!-- 商标 -->
+    <string name="ic_sb">&#xe636;</string>
+    <!-- 著作权 -->
+    <string name="ic_zzq">&#xe634;</string>
+    <!-- 企业证书 -->
+    <string name="ic_qyzs">&#xe632;</string>
+    <!-- 财务数据 -->
+    <string name="ic_cwsj">&#xe62f;</string>
+    <!-- 股权出质 -->
+    <string name="ic_gqcz">&#xe630;</string>
+    <!-- 税务信用 -->
+    <string name="ic_swxy">&#xe633;</string>
+    <!-- 融资信息 -->
+    <string name="ic_rzxx">&#xe631;</string>
+
+
 </resources>

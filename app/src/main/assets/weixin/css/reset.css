@@ -1,0 +1,105 @@
+body, html {
+  height: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  background:#efefef
+}
+a{ color:#333}
+.clear{ clear:both}
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1472087850'); /* IE9*/
+  src: url('iconfont.eot?t=1472087850#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1472087850') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1472087850') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1472087850#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-news:before { content: "\e601"; }
+.icon-xiangji:before { content: "\e602"; }
+.icon-bianji:before { content: "\e603"; }
+.icon-jiangpai:before { content: "\e600"; }
+.icon-chaxun:before { content: "\e604"; }
+.icon-tongzhi:before { content: "\e605"; }
+.icon-anli:before { content: "\e606"; }
+.icon-txt:before { content: "\e607"; }
+.icon-news1:before { content: "\e608"; }
+.icon-tupian:before { content: "\e609"; }
+.icon-liuyan-copy:before { content: "\e60a"; }
+.icon-benshubook189:before { content: "\e60b"; }
+.icon-falvsolid:before { content: "\e60c"; }
+.icon-wenjian-copy:before { content: "\e60d"; }
+.icon-chaxun1:before { content: "\e60e"; }
+.header {
+  width: 100%;
+} 
+.header img{ width:100%; height: auto; display: block;}
+.common_box{ width:100%; background:#fff; margin-bottom:1em}
+.common_title{ padding:0.5em; border-bottom:#ddd 1px solid}
+.cbox{  text-align:center;font-size:14px; padding:20px 0}
+.cbox i{ width:50px; height:50px; font-size:24px; border-radius:50%; line-height:50px; color:#fff; margin-bottom:10px}
+.c1{ background:#ffbf05;}
+.c2{ background:#ffbfd5;}
+.c3{ background:#a2caed;}
+.c4{ background:#8ed889;}
+.c5{ background:#fc6763;}
+.c6{ background:#ff9f3d;}
+.c7{ background:#4ebff9;}
+.c8{ background:#f77b71;}
+.c9{ background:#5dccb9;}
+.c10{ background:#9668e2;}
+.c11{ background:#ff7800;}
+.c12{ background:#e795b2;}
+.c13{ background:#6fb3ef;}
+.c14{ background:#60bb5a;}
+.c15{ background:#43ddc3;}
+.news_list{ line-height:30px; padding:0 10px; font-size:12px}
+.news_list span{ float:right; color:#999}
+.weui-row{ padding:0 10px}
+.headerbar{  position:fixed; z-index: 999; left:0; top:0; box-sizing:border-box; -webkit-box-sizing:border-box; width: 100%;  height:50px;  padding: 0 10px; background: #009cff;}
+.headerbar h2{ width: 100%; height: 50px; line-height: 50px; text-align:center; font-size: 19px; color:#fff;}
+.headerbar .back {  display: block;  width: 60px; padding-left: 12px;  height: 50px; line-height:52px; position: absolute;  left: 0; top: 0;  display: -webkit-box;  -webkit-box-orient: horizontal;  -webkit-box-pack: center;  -webkit-box-align: center;  font-size: 14px;  color: #FFF; }
+.headerbar .cancel{ position: absolute; left: 0; font-size: 14px; padding-left: 0;}
+.headerbar .toregister {display: block; width: 60px; height: 50px; position: absolute; right: 0; top: 0; display: -webkit-box;  -webkit-box-orient: horizontal;  -webkit-box-pack: center;  -webkit-box-align: center;  font-size: 14px;  color: #FFF;}
+.headerbar .back:active,.headerbar .toregister:active{ background: rgba(0,0,0,0.2);}
+.headerbar .back span { display: block; position: absolute; left: 14px; top: 18px; width: 14px; height: 14px; margin: 0 auto; border-right: 1px solid #FFF; border-bottom: 1px solid #FFF; transform: rotate(135deg); -webkit-transform: rotate(135deg); }
+/*reset*/
+.weui_search_bar {
+  padding: 15px 10px;
+}
+.weui_search_bar:before {
+  border-top:0;
+}
+.weui_search_bar:after {
+  border-bottom: 0
+}
+.weui_search_outer {
+  border-radius: 0;
+}
+.weui_search_outer:after {
+  border: 0;
+  border-radius: 0;
+}
+.swiper-container {
+  width: 100%; margin-bottom:10px
+} 
+.swiper-container img{
+  width: 100%; display:block
+}
+.mt50{ margin-top:50px}
+.weui_cell_primary span{ font-size:12px; color:#999; margin-right:10px}
+.weui_article h1{ font-size:18px}
+.weui_article .date{ font-size:14px; color:#999}
+.weui_article section{ font-size:16px}
+.weui_toptips {
+  z-index: 1000;
+}
+.weui_label{ text-align:right; width:70px; margin-right:10px}

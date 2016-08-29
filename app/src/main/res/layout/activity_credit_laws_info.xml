@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="关于加强企业环境信用体系建设的指导意见"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2012年08月24日 07:11" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:text="来源：环发[2015]161号" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:lineSpacingExtra="3dp"
+                android:text="  关于加强企业环境信用体系建设的指导意见
+    各省、自治区、直辖市环境保护厅（局），新疆生产建设兵团环境保护局，辽
+河凌河保护区管理局，各省、自治区、直辖市、新疆生产建设兵团发展改革委：
+根据党中央、国务院关于推进社会信用体系建设的部署和要求，为加快建
+立企业环保守信激励、失信惩戒机制，现就加强企业环境信用体系建设提出如下意
+见：
+    一、指导原则和目标任务
+    （一）制定依据
+党中央、国务院高度重视社会信用体系建设。党的十八大提出“加强政务
+诚信、商务诚信、社会诚信和司法公信建设”。党的十八届三中全会提出 “建立健
+全社会征信体系，褒扬诚信，惩戒失信”。党的十八届四中全会提出“加强社会诚
+信建设，健全公民和组织守法信用记录，完善守法诚信褒奖机制和违法失信行为惩
+戒机制”。
+    环境保护领域信用建设是社会信用体系建设的重要组成部分。新修订的
+《环境保护法》规定，企业事业单位和其他生产经营者的环境违法信息应当记入社
+会诚信档案，违法者名单应当及时向社会公布。国务院印发的《社会信用体系建设
+规划纲要（2014—2020年）》对环保领域信用建设提出了明确要求。国务院办公厅
+印发的《关于加强环境监管执法的通知》要求:“建立环境信用评价制度，将环境违
+法企业列入‘黑名单’并向社会公开，将其环境违法行为纳入社会信用体系，让失
+信企业一次违法、处处受限”。
+"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

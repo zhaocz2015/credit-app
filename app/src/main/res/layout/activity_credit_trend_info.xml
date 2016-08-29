@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="潍坊市社会信用体系建设联席会议办公室公开征求意见的通知"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2012年08月24日 07:11"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="来源：潍坊市社会信用建设联席会议办公室"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:lineSpacingExtra="3dp"
+                android:text="  为加快推进社会信用体系建设，创建国家社会信用建设示范城市，根据市政府安排，
+结合潍坊实际，市社会信用建设联席会议办公室（以下简称“市信用办”）起草了《关于建立
+失信联合惩戒制度加快推进社会诚信建设的意见（征求意见稿）》和《潍坊市公共信用信息
+归集和使用管理办法（征求意见稿）》，现向社会公开征求意见。公众可登录信用潍坊网
+（网址：http://www.wfcredit.gov.cn/）或者潍坊市发展和改革委员会网站（网
+址：http://www.wfdpc.gov.cn/）查看文件内容。有关单位、组织、个人如有修改意见，请于
+2016年8月26日之前，通过电子邮件或传真直接向市信用办反馈意见。
+    联系电话：8090771 8090746
+    传 真：8090748
+    电子邮箱：wfshxytx@126.com
+    潍坊市公共信用信息归集和使用管理办法(征求意见稿）
+    关于建立失信联合惩戒制度（征求意见稿）
+    潍坊市社会信用建设联席会议办公室
+                2016年8月21日
+"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

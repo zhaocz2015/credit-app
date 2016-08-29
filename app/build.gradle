@@ -55,10 +55,16 @@ dependencies {
     compile 'com.optimus:editTextField:0.2.0'
 
     // 3d-cloud-tags
-    compile 'com.moxun:tagcloudlib:1.2.0'
+//    compile 'com.moxun:tagcloudlib:1.2.0'
 
     // tagview-layout
     compile 'co.lujun:androidtagview:1.0.3'
+
+    // circle-image-view
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+
+    // tag-view
+    compile 'com.jude:tagview:2.1.5'
 
     //material-drawer
 //    compile('com.mikepenz:materialdrawer:5.5.0@aar') {

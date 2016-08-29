@@ -1,5 +1,6 @@
 package com.wfzcx.credit.module.main;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -20,6 +21,11 @@ import com.jude.rollviewpager.adapter.LoopPagerAdapter;
 import com.jude.rollviewpager.hintview.ColorPointHintView;
 import com.jude.utils.JUtils;
 import com.wfzcx.credit.R;
+import com.wfzcx.credit.module.main.cases.CreditCaseListActivity;
+import com.wfzcx.credit.module.main.ents.CreditEntsListActivity;
+import com.wfzcx.credit.module.main.expo.CreditExpoListActivity;
+import com.wfzcx.credit.module.main.law.CreditLawsListActivity;
+import com.wfzcx.credit.module.main.trend.CreditTrendListActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -28,6 +34,7 @@ import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Copyright (C) 2016
@@ -51,7 +58,7 @@ public class Main2Fragment extends BeamFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         if (rootView == null) {
-            rootView = inflater.inflate(R.layout.fragment_main2, container, false);
+            rootView = inflater.inflate(R.layout.fragment_main22, container, false);
             ButterKnife.bind(this, rootView);
 
             initNewsRollPager();
@@ -59,6 +66,7 @@ public class Main2Fragment extends BeamFragment {
 
         }
 
+        ButterKnife.bind(this, rootView);
         return rootView;
     }
 
@@ -137,5 +145,59 @@ public class Main2Fragment extends BeamFragment {
         data.add(m5);
         newsAdapter.addAll(data);
 
+    }
+
+    @OnClick({R.id.tv_search_txt, R.id.ll_credit_ents, R.id.ll_credit_expo, R.id.ll_credit_pub, R.id.ll_credit_law1, R.id.ll_credit_law2, R.id.ll_credit_law3, R.id.ll_credit_trend, R.id.ll_credit_news, R.id.ll_credit_pics, R.id.ll_credit_knows, R.id.ll_credit_search, R.id.ll_knows_search, R.id.ll_credit_reply, R.id.ll_credit_report, R.id.ll_credit_notice})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.tv_search_txt:
+                startActivity(new Intent(getContext(), CreditSearchActivity.class));
+                break;
+            case R.id.ll_credit_ents:
+                startActivity(new Intent(getContext(), CreditEntsListActivity.class));
+                break;
+            case R.id.ll_credit_expo:
+                startActivity(new Intent(getContext(), CreditExpoListActivity.class));
+                break;
+            case R.id.ll_credit_pub:
+                startActivity(new Intent(getContext(), CreditCaseListActivity.class));
+                break;
+            case R.id.ll_credit_law1:
+                startActivity(new Intent(getContext(), CreditLawsListActivity.class));
+                break;
+            case R.id.ll_credit_law2:
+                startActivity(new Intent(getContext(), CreditLawsListActivity.class));
+                break;
+            case R.id.ll_credit_law3:
+                startActivity(new Intent(getContext(), CreditLawsListActivity.class));
+                break;
+            case R.id.ll_credit_trend:
+                startActivity(new Intent(getContext(), CreditTrendListActivity.class));
+                break;
+            case R.id.ll_credit_news:
+                startActivity(new Intent(getContext(), CreditSearchActivity.class));
+                break;
+            case R.id.ll_credit_pics:
+                startActivity(new Intent(getContext(), CreditCaseListActivity.class));
+                break;
+            case R.id.ll_credit_knows:
+                startActivity(new Intent(getContext(), CreditCaseListActivity.class));
+                break;
+            case R.id.ll_credit_search:
+                startActivity(new Intent(getContext(), CreditSearchActivity.class));
+                break;
+            case R.id.ll_knows_search:
+                startActivity(new Intent(getContext(), CreditSearchActivity.class));
+                break;
+            case R.id.ll_credit_reply:
+                startActivity(new Intent(getContext(), CreditSearchActivity.class));
+                break;
+            case R.id.ll_credit_report:
+                startActivity(new Intent(getContext(), CreditSearchActivity.class));
+                break;
+            case R.id.ll_credit_notice:
+                startActivity(new Intent(getContext(), CreditSearchActivity.class));
+                break;
+        }
     }
 }

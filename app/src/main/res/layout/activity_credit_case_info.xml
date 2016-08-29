@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="新华社：“史上最惨烈”电商价格战滑稽收场 商家信用受损"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2012年08月24日 07:11" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:text="来源：新华网" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:lineSpacingExtra="3dp"
+                android:text="   号称“史上最惨烈”的电商“价格战”以一种滑稽的结局收场：“价格战”发起方删除降价微博，产品价格悄然回调。人们从当初的欣喜到茫然再到失望，无疑成为“最受伤的人”。而商家在这场试图“空手套白狼”的营销战中，却在宝贵的诚信上失分，令整个电子商务行业蒙羞。
+如今看来，不少数据都印证着这场“价格战”实为“营销战”。比价网一淘网的监测数据显示，“价格战”打响第一天，真正降价的商品仅有５％左右，而在此前一天晚上，部分商家还悄然提升了商品价格；“价格战”开始后，不少热销商品频频缺货，缺货率最高的商家甚至达到３０％。
+市场欢迎竞争，因为竞争从根本上讲有利于优胜劣汰，促进行业健康发展。但凡事皆有度，如果频频发起的“价格战”屡屡被证明只是一种促销手段，这样的促销就有作秀和欺诈之嫌，必为消费者所不齿。
+“价格战”现象还折射出电商对发展模式的误判。从京东来看，或许其认为自己有几十亿元的资本做靠山，只要把销量做大，把规模做大，最终成功上市，其商业模式就是成功。殊不知对任何一个商家而言，最输不起的就是信用。以“价格战”来换取消费者关注，却并不给消费者真正的预期实惠，受骗的消费者难免选择“用脚投票”。
+令人不解的是，无论电商还是实体商家，缺乏诚信的例子近年大有增多之势。不少商家逢年过节纷纷打出“满送”“直减”等促销活动，但事后不少被证实是欺骗消费者的幌子。２０１１年４月，有部分商贸流通企业因返券促销价或优惠折扣价高于原价以及不如实标示附加条件等欺诈行为被处罚，至今却未能引起更多商家的警醒。这对加重处罚力度，或许是又提了个醒。
+“人无信不立”，对企业而言，加强诚信建设，从“价格战”转向“价值战”和“服务战”，以诚实经营致力于持续发展，换取消费者信任，这才是赢得市场份额、获得长远发展的真正法宝。（记者雷敏）"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

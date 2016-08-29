@@ -29,6 +29,32 @@
 
         <activity android:name=".MainActivity" />
 
+        <activity android:name=".module.main.CreditSearchActivity" />
+
+        <activity android:name=".module.main.ents.CreditEntsListActivity" />
+
+        <activity android:name=".module.main.ents.CreditEntInfoActivity" />
+
+        <activity android:name=".module.main.expo.CreditExpoListActivity" />
+
+        <activity android:name=".module.main.expo.CreditExpoInfoActivity" />
+
+        <activity android:name=".module.main.cases.CreditCaseListActivity" />
+
+        <activity android:name=".module.main.cases.CreditCaseInfoActivity" />
+
+        <activity android:name=".module.main.law.CreditLawsListActivity" />
+
+        <activity android:name=".module.main.law.CreditLawsInfoActivity" />
+
+        <activity android:name=".module.main.trend.CreditTrendListActivity" />
+
+        <activity android:name=".module.main.trend.CreditTrendInfoActivity" />
+
+        <activity android:name=".module.main.news.CreditNewsListActivity" />
+
+        <activity android:name=".module.main.news.CreditNewsInfoActivity" />
+
         <activity android:name=".module.login.LoginActivity" />
 
     </application>

@@ -91,4 +91,53 @@
 
     </ScrollView>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="8dp"
+                    android:text="搜索历史"
+                    android:textColor="@color/red_dc1929" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ddd" />
+
+            <co.lujun.androidtagview.TagContainerLayout
+                android:id="@+id/tcl_history_words"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="8dp"
+                app:container_background_color="@color/white"
+                app:container_border_radius="0dp"
+                app:container_enable_drag="false"
+                app:horizontal_interval="10dp"
+                app:tag_background_color="@color/blue_2196F3"
+                app:tag_clickable="true"
+                app:tag_text_color="@color/white"
+                app:tag_theme="random"
+                app:vertical_interval="10dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
 </LinearLayout>
