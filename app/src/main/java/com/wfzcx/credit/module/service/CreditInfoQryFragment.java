@@ -30,6 +30,9 @@ public class CreditInfoQryFragment extends BeamFragment {
     @BindView(R.id.tcl_key_words)
     TagContainerLayout mTagContainerLayout;
 
+    @BindView(R.id.tcl_history_words)
+    TagContainerLayout histTagContainerLayout;
+
 
     @Nullable
     @Override
@@ -39,6 +42,7 @@ public class CreditInfoQryFragment extends BeamFragment {
             ButterKnife.bind(this, rootView);
 
             initTagContainerLayout();
+            initHistTagContainerLayout();
         }
 
         return rootView;
@@ -48,6 +52,22 @@ public class CreditInfoQryFragment extends BeamFragment {
 
         mTagContainerLayout.setTags(new String[]{"信用潍坊", "信用黑名单", "诚信企业", "信用曝光", "潍柴动力", "福田重工", "歌尔声学", "潍柴动力", "福田重工", "歌尔声学", "潍柴动力", "福田重工", "歌尔声学", "潍柴动力", "福田重工", "歌尔声学", "潍柴动力", "福田重工", "歌尔声学", "潍柴动力", "福田重工", "歌尔声学"});
         mTagContainerLayout.setOnTagClickListener(new TagView.OnTagClickListener() {
+            @Override
+            public void onTagClick(int position, String text) {
+                JUtils.Toast(text);
+            }
+
+            @Override
+            public void onTagLongClick(int position, String text) {
+
+            }
+        });
+    }
+
+    private void initHistTagContainerLayout() {
+
+        histTagContainerLayout.setTags(new String[]{"信用潍坊", "信用黑名单", "诚信企业", "信用曝光", "潍柴动力", "福田重工", "歌尔声学", "潍柴动力", "福田重工", "歌尔声学", "潍柴动力", "福田重工", "歌尔声学", "潍柴动力", "福田重工", "歌尔声学", "潍柴动力", "福田重工", "歌尔声学", "潍柴动力", "福田重工", "歌尔声学"});
+        histTagContainerLayout.setOnTagClickListener(new TagView.OnTagClickListener() {
             @Override
             public void onTagClick(int position, String text) {
                 JUtils.Toast(text);

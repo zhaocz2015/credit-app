@@ -29,6 +29,12 @@
 
         <activity android:name=".MainActivity" />
 
+        <activity android:name=".module.main.CreditSearchActivity" />
+
+        <activity android:name=".module.main.ents.CreditEntsListActivity" />
+
+        <activity android:name=".module.main.ents.CreditEntInfoActivity" />
+
         <activity android:name=".module.login.LoginActivity" />
 
     </application>

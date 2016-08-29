@@ -59,4 +59,8 @@
     <!-- 通知公告 -->
     <string name="ic_main_notice_tip">&#xe611;</string>
 
+    <!--删除 -->
+    <string name="ic_remove">&#xe61c;</string>
+
+
 </resources>

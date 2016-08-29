@@ -13,6 +13,7 @@ import com.jude.beam.expansion.BeamBaseActivity;
 import com.jude.utils.JUtils;
 import com.wfzcx.credit.module.interact.InteractFragment;
 import com.wfzcx.credit.module.main.Main2Fragment;
+import com.wfzcx.credit.module.main.Main3Fragment;
 import com.wfzcx.credit.module.service.ServiceFragment;
 import com.wfzcx.credit.module.user.UserFragment;
 import com.wfzcx.credit.ui.FontTextView;

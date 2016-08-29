@@ -7,6 +7,7 @@
     android:background="@color/primary"
     android:minHeight="?attr/actionBarSize"
     android:navigationIcon="@drawable/ic_go_back"
+    android:title=""
     app:navigationIcon="@drawable/ic_go_back">
 
     <TextView

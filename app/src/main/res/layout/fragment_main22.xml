@@ -11,7 +11,6 @@
         android:background="#efefef"
         android:orientation="vertical">
 
-
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="140dp"
@@ -69,6 +68,7 @@
 
                 <!-- 诚信企业 -->
                 <LinearLayout
+                    android:id="@+id/ll_credit_ents"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -97,6 +97,7 @@
 
                 <!-- 诚信企业 -->
                 <LinearLayout
+                    android:id="@+id/ll_credit_expo"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -125,6 +126,7 @@
 
                 <!-- 诚信企业 -->
                 <LinearLayout
+                    android:id="@+id/ll_credit_pub"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -153,6 +155,7 @@
 
                 <!-- 诚信企业 -->
                 <LinearLayout
+                    android:id="@+id/ll_credit_law1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -181,6 +184,7 @@
 
                 <!-- 诚信企业 -->
                 <LinearLayout
+                    android:id="@+id/ll_credit_law2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -219,6 +223,7 @@
 
                 <!-- 诚信企业 -->
                 <LinearLayout
+                    android:id="@+id/ll_credit_law3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -247,6 +252,7 @@
 
                 <!-- 诚信企业 -->
                 <LinearLayout
+                    android:id="@+id/ll_credit_trend"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -275,6 +281,7 @@
 
                 <!-- 诚信企业 -->
                 <LinearLayout
+                    android:id="@+id/ll_credit_news"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -303,6 +310,7 @@
 
                 <!-- 诚信企业 -->
                 <LinearLayout
+                    android:id="@+id/ll_credit_pics"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -331,6 +339,7 @@
 
                 <!-- 诚信企业 -->
                 <LinearLayout
+                    android:id="@+id/ll_credit_knows"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -390,6 +399,7 @@
 
                 <!-- 诚信企业 -->
                 <LinearLayout
+                    android:id="@+id/ll_credit_search"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -418,6 +428,7 @@
 
                 <!-- 诚信企业 -->
                 <LinearLayout
+                    android:id="@+id/ll_knows_search"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -446,6 +457,7 @@
 
                 <!-- 诚信企业 -->
                 <LinearLayout
+                    android:id="@+id/ll_credit_reply"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -474,6 +486,7 @@
 
                 <!-- 诚信企业 -->
                 <LinearLayout
+                    android:id="@+id/ll_credit_report"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -502,6 +515,7 @@
 
                 <!-- 诚信企业 -->
                 <LinearLayout
+                    android:id="@+id/ll_credit_notice"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

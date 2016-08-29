@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>市场主体信用公示平台</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<link rel="stylesheet" href="css/weui.min.css">
+<link rel="stylesheet" href="css/jquery-weui.css">
+<link rel="stylesheet" href="css/reset.css">
+</head>
+
+<body ontouchstart>
+<header class="headerbar indexheader">
+  <a href="javascript:;" onClick="javascript :history.go(-1);" class="back">返回
+    <span></span>
+  </a>
+  <h2>信用搜索</h2>
+</header>
+<div class="weui_search_bar mt50" id="search_bar">
+  <form class="weui_search_outer" action="search_list.html">
+    <div class="weui_search_inner">
+      <i class="weui_icon_search"></i>
+      <input type="search" class="weui_search_input" id="search_input" placeholder="请输入企业名称、注册号或统一社会信用代码进行搜索" required/>
+      <a href="javascript:" class="weui_icon_clear" id="search_clear"></a>
+    </div>
+    <label for="search_input" class="weui_search_text" id="search_text">
+      <i class="weui_icon_search"></i>
+      <span>信用搜索</span>
+    </label>
+  </form>
+  <a href="javascript:" class="weui_search_cancel" id="search_cancel">取消</a>
+</div>
+<div class="common_box">
+  <div class="common_title">共找到5条数据。 （非企业组织（社团、学校等）或 注册登记名称不一致市场主体查询）</div>
+  <div class="weui_cells weui_cells_access" id="list">
+    <a class="weui_cell" href="news_content.html">
+      <div class="weui_cell_bd weui_cell_primary">
+        <p>潍坊市晨光乳业有限公司<br><span>注册号:440306102819222</span><span>成立日期:1994年05月04日</span></p>
+      </div>
+      <div class="weui_cell_ft"></div>
+    </a>
+    <a class="weui_cell" href="news_content.html">
+      <div class="weui_cell_bd weui_cell_primary">
+        <p>潍坊市晨光乳业有限公司<br><span>注册号:440306102819222</span><span>成立日期:1994年05月04日</span></p>
+      </div>
+      <div class="weui_cell_ft"></div>
+    </a>
+    <a class="weui_cell" href="news_content.html">
+      <div class="weui_cell_bd weui_cell_primary">
+        <p>潍坊市晨光乳业有限公司<br><span>注册号:440306102819222</span><span>成立日期:1994年05月04日</span></p>
+      </div>
+      <div class="weui_cell_ft"></div>
+    </a>
+    <a class="weui_cell" href="news_content.html">
+      <div class="weui_cell_bd weui_cell_primary">
+        <p>潍坊市晨光乳业有限公司<br><span>注册号:440306102819222</span><span>成立日期:1994年05月04日</span></p>
+      </div>
+      <div class="weui_cell_ft"></div>
+    </a>
+    <a class="weui_cell" href="news_content.html">
+      <div class="weui_cell_bd weui_cell_primary">
+        <p>潍坊市晨光乳业有限公司<br><span>注册号:440306102819222</span><span>成立日期:1994年05月04日</span></p>
+      </div>
+      <div class="weui_cell_ft"></div>
+    </a>
+    <a class="weui_cell" href="news_content.html">
+      <div class="weui_cell_bd weui_cell_primary">
+        <p>潍坊市晨光乳业有限公司<br><span>注册号:440306102819222</span><span>成立日期:1994年05月04日</span></p>
+      </div>
+      <div class="weui_cell_ft"></div>
+    </a>
+    <a class="weui_cell" href="news_content.html">
+      <div class="weui_cell_bd weui_cell_primary">
+        <p>潍坊市晨光乳业有限公司<br><span>注册号:440306102819222</span><span>成立日期:1994年05月04日</span></p>
+      </div>
+      <div class="weui_cell_ft"></div>
+    </a>
+    <a class="weui_cell" href="news_content.html">
+      <div class="weui_cell_bd weui_cell_primary">
+        <p>潍坊市晨光乳业有限公司<br><span>注册号:440306102819222</span><span>成立日期:1994年05月04日</span></p>
+      </div>
+      <div class="weui_cell_ft"></div>
+    </a>
+  </div>
+</div>
+<div class="weui-infinite-scroll">
+  <div class="infinite-preloader"></div>
+  正在加载
+</div>
+<script src="js/jquery-2.1.4.js"></script>
+<script src="js/fastclick.js"></script>
+<script>
+  $(function() {
+    FastClick.attach(document.body);
+  });
+</script>
+<script src="js/jquery-weui.js"></script>
+<script src="js/swiper.min.js"></script>
+<script>
+      var loading = false;
+      $(document.body).infinite().on("infinite", function() {
+        if(loading) return;
+        loading = true;
+        setTimeout(function() {
+          $("#list").append(
+		  '<a class="weui_cell" href="news_content.html">'+
+		  '<div class="weui_cell_bd weui_cell_primary">'+
+		  '<p>我是滚动加载出来的<br><span>注册号:440306102819222</span><span>成立日期:1994年05月04日</span></p>'+
+		  '</div>'+
+		  '<div class="weui_cell_ft"></div>'+
+		  '</a>');
+          loading = false;
+        }, 1000);
+      });
+    </script>
+</body>
+</html>
