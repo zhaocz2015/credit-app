@@ -1,4 +1,4 @@
-package com.wfzcx.credit.module.main.news;
+package com.wfzcx.credit.module.main.knows;
 
 import android.os.Bundle;
 import android.view.ViewGroup;
@@ -23,8 +23,8 @@ import butterknife.ButterKnife;
  * @email: zhaocz2015@163.com
  * @date: 2016-08-29
  */
-@RequiresPresenter(CreditNewsListPresenter.class)
-public class CreditNewsListActivity extends BeamListActivity<CreditNewsListPresenter, Map> {
+@RequiresPresenter(CreditKnowsListPresenter.class)
+public class CreditKnowsListActivity extends BeamListActivity<CreditKnowsListPresenter, Map> {
 
     @BindView(R.id.toolbar_title)
     TextView toolbarTitle;
@@ -39,7 +39,7 @@ public class CreditNewsListActivity extends BeamListActivity<CreditNewsListPrese
 
     private void initToolbar() {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-        toolbarTitle.setText("信用要闻");
+        toolbarTitle.setText("信用知识");
     }
 
     @Override
@@ -49,7 +49,7 @@ public class CreditNewsListActivity extends BeamListActivity<CreditNewsListPrese
 
     @Override
     public BaseViewHolder<Map> getViewHolder(ViewGroup parent, int viewType) {
-        return new CreditNewsVHodler(parent);
+        return new CreditKnowsVHodler(parent);
     }
 
     @Override

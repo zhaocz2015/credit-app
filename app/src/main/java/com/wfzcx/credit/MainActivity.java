@@ -12,8 +12,7 @@ import android.widget.TextView;
 import com.jude.beam.expansion.BeamBaseActivity;
 import com.jude.utils.JUtils;
 import com.wfzcx.credit.module.interact.InteractFragment;
-import com.wfzcx.credit.module.main.Main2Fragment;
-import com.wfzcx.credit.module.main.Main3Fragment;
+import com.wfzcx.credit.module.main.Main4Fragment;
 import com.wfzcx.credit.module.service.ServiceFragment;
 import com.wfzcx.credit.module.user.UserFragment;
 import com.wfzcx.credit.ui.FontTextView;
@@ -75,7 +74,7 @@ public class MainActivity extends BeamBaseActivity {
 
     public enum MainTab {
 
-        MAIN(0, R.string.main_tab_title_main, R.string.ic_main, Main2Fragment.class),
+        MAIN(0, R.string.main_tab_title_main, R.string.ic_main, Main4Fragment.class),
         SERVICE(1, R.string.main_tab_title_service, R.string.ic_service, ServiceFragment.class),
         INTERACT(2, R.string.main_tab_title_interact, R.string.ic_interact, InteractFragment.class),
         USER(3, R.string.main_tab_title_user, R.string.ic_user, UserFragment.class);

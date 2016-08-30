@@ -55,6 +55,12 @@
 
         <activity android:name=".module.main.news.CreditNewsInfoActivity" />
 
+        <activity android:name=".module.main.ents.CreditEntsGridActivity" />
+
+        <activity android:name=".module.main.knows.CreditKnowsListActivity" />
+
+        <activity android:name=".module.main.knows.CreditKnowsInfoActivity" />
+
         <activity android:name=".module.login.LoginActivity" />
 
     </application>

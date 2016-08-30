@@ -19,12 +19,14 @@ import com.jude.rollviewpager.RollPagerView;
 import com.jude.rollviewpager.Util;
 import com.jude.rollviewpager.adapter.LoopPagerAdapter;
 import com.jude.rollviewpager.hintview.ColorPointHintView;
-import com.jude.utils.JUtils;
 import com.wfzcx.credit.R;
 import com.wfzcx.credit.module.main.cases.CreditCaseListActivity;
+import com.wfzcx.credit.module.main.ents.CreditEntInfoActivity;
 import com.wfzcx.credit.module.main.ents.CreditEntsListActivity;
 import com.wfzcx.credit.module.main.expo.CreditExpoListActivity;
+import com.wfzcx.credit.module.main.knows.CreditKnowsListActivity;
 import com.wfzcx.credit.module.main.law.CreditLawsListActivity;
+import com.wfzcx.credit.module.main.news.CreditNewsInfoActivity;
 import com.wfzcx.credit.module.main.news.CreditNewsListActivity;
 import com.wfzcx.credit.module.main.trend.CreditTrendListActivity;
 
@@ -45,9 +47,12 @@ import butterknife.OnClick;
  * @email: zhaocz2015@163.com
  * @date: 2016-08-26
  */
-public class Main2Fragment extends BeamFragment {
+public class Main4Fragment extends BeamFragment {
 
     private View rootView;
+
+    @BindView(R.id.recycler_credit_ents)
+    EasyRecyclerView entsRecycler;
 
     @BindView(R.id.roll_pager_news)
     RollPagerView newsRollPager;
@@ -59,9 +64,10 @@ public class Main2Fragment extends BeamFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         if (rootView == null) {
-            rootView = inflater.inflate(R.layout.fragment_main22, container, false);
+            rootView = inflater.inflate(R.layout.fragment_main4, container, false);
             ButterKnife.bind(this, rootView);
 
+            initEntsRecycler();
             initNewsRollPager();
             initNewsRecycler();
 
@@ -69,6 +75,58 @@ public class Main2Fragment extends BeamFragment {
 
         ButterKnife.bind(this, rootView);
         return rootView;
+    }
+
+
+    private void initEntsRecycler() {
+        RecyclerArrayAdapter entsAdapter = new RecyclerArrayAdapter(getContext()) {
+            @Override
+            public BaseViewHolder OnCreateViewHolder(ViewGroup parent, int viewType) {
+                return new EntsVHodler(parent);
+            }
+
+            class EntsVHodler extends BaseViewHolder<Map> {
+
+                public EntsVHodler(ViewGroup parent) {
+                    super(parent, R.layout.item_credit_enterprise);
+                }
+
+                @Override
+                public void setData(Map data) {
+
+                }
+            }
+
+        };
+
+        entsAdapter.setOnItemClickListener(position -> {
+            startActivity(new Intent(getContext(), CreditEntInfoActivity.class));
+        });
+
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
+        entsRecycler.setLayoutManager(linearLayoutManager);
+        entsRecycler.setAdapter(entsAdapter);
+
+        List<Map> data = new ArrayList<Map>();
+
+        Map m1 = new HashMap();
+        Map m2 = new HashMap();
+        Map m3 = new HashMap();
+        Map m4 = new HashMap();
+        Map m5 = new HashMap();
+
+        data.add(m1);
+        data.add(m2);
+        data.add(m3);
+        data.add(m4);
+        data.add(m5);
+        data.add(m1);
+        data.add(m2);
+        data.add(m3);
+        data.add(m4);
+        data.add(m5);
+        entsAdapter.addAll(data);
     }
 
     private void initNewsRollPager() {
@@ -85,7 +143,7 @@ public class Main2Fragment extends BeamFragment {
                 imgView.setScaleType(ImageView.ScaleType.CENTER_CROP);
 
                 imgView.setOnClickListener(v -> {
-                    JUtils.Toast("查看图片新闻");
+                    startActivity(new Intent(getContext(), CreditNewsInfoActivity.class));
                 });
 
                 return imgView;
@@ -121,7 +179,7 @@ public class Main2Fragment extends BeamFragment {
         };
 
         newsAdapter.setOnItemClickListener(position -> {
-            JUtils.Toast("信用要闻");
+            startActivity(new Intent(getContext(), CreditNewsInfoActivity.class));
         });
 
         newsRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -148,7 +206,7 @@ public class Main2Fragment extends BeamFragment {
 
     }
 
-    @OnClick({R.id.tv_search_txt, R.id.ll_credit_ents, R.id.ll_credit_expo, R.id.ll_credit_pub, R.id.ll_credit_law1, R.id.ll_credit_law2, R.id.ll_credit_law3, R.id.ll_credit_trend, R.id.ll_credit_news, R.id.ll_credit_pics, R.id.ll_credit_knows, R.id.ll_credit_search, R.id.ll_knows_search, R.id.ll_credit_reply, R.id.ll_credit_report, R.id.ll_credit_notice})
+    @OnClick({R.id.ll_credit_ents_more, R.id.ll_credit_news_more, R.id.tv_search_txt, R.id.ll_credit_ents, R.id.ll_credit_expo, R.id.ll_credit_pub, R.id.ll_credit_law1, R.id.ll_credit_law2, R.id.ll_credit_law3, R.id.ll_credit_trend, R.id.ll_credit_news, R.id.ll_credit_pics, R.id.ll_credit_knows, R.id.ll_credit_search, R.id.ll_knows_search, R.id.ll_credit_reply, R.id.ll_credit_report, R.id.ll_credit_notice})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.tv_search_txt:
@@ -182,8 +240,17 @@ public class Main2Fragment extends BeamFragment {
                 startActivity(new Intent(getContext(), CreditNewsListActivity.class));
                 break;
             case R.id.ll_credit_knows:
-                startActivity(new Intent(getContext(), CreditCaseListActivity.class));
+                startActivity(new Intent(getContext(), CreditKnowsListActivity.class));
                 break;
+
+            case R.id.ll_credit_ents_more:
+                startActivity(new Intent(getContext(), CreditEntsListActivity.class));
+                break;
+            case R.id.ll_credit_news_more:
+                startActivity(new Intent(getContext(), CreditNewsListActivity.class));
+                break;
+
+
             case R.id.ll_credit_search:
                 startActivity(new Intent(getContext(), CreditSearchActivity.class));
                 break;
@@ -201,4 +268,5 @@ public class Main2Fragment extends BeamFragment {
                 break;
         }
     }
+
 }

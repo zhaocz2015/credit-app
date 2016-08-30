@@ -1,6 +1,7 @@
-package com.wfzcx.credit.module.main.news;
+package com.wfzcx.credit.module.main.ents;
 
 import android.os.Bundle;
+import android.support.v7.widget.GridLayoutManager;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
@@ -21,10 +22,10 @@ import butterknife.ButterKnife;
  *
  * @author:赵小布
  * @email: zhaocz2015@163.com
- * @date: 2016-08-29
+ * @date: 2016-08-30
  */
-@RequiresPresenter(CreditNewsListPresenter.class)
-public class CreditNewsListActivity extends BeamListActivity<CreditNewsListPresenter, Map> {
+@RequiresPresenter(CreditEntsGridPresenter.class)
+public class CreditEntsGridActivity extends BeamListActivity<CreditEntsGridPresenter, Map> {
 
     @BindView(R.id.toolbar_title)
     TextView toolbarTitle;
@@ -39,7 +40,9 @@ public class CreditNewsListActivity extends BeamListActivity<CreditNewsListPrese
 
     private void initToolbar() {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-        toolbarTitle.setText("信用要闻");
+        toolbarTitle.setText("诚信企业TOP100");
+
+        getListView().setLayoutManager(new GridLayoutManager(this, 4));
     }
 
     @Override
@@ -48,12 +51,12 @@ public class CreditNewsListActivity extends BeamListActivity<CreditNewsListPrese
     }
 
     @Override
-    public BaseViewHolder<Map> getViewHolder(ViewGroup parent, int viewType) {
-        return new CreditNewsVHodler(parent);
+    public ListConfig getConfig() {
+        return super.getConfig().setRefreshAble(true);
     }
 
     @Override
-    public ListConfig getConfig() {
-        return super.getConfig().setRefreshAble(true);
+    public BaseViewHolder<Map> getViewHolder(ViewGroup parent, int viewType) {
+        return new CreditEnt2VHolder(parent);
     }
 }

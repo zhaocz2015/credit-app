@@ -1,4 +1,4 @@
-package com.wfzcx.credit.module.main.news;
+package com.wfzcx.credit.module.main.knows;
 
 import android.os.Bundle;
 import android.widget.TextView;
@@ -17,7 +17,7 @@ import butterknife.ButterKnife;
  * @email: zhaocz2015@163.com
  * @date: 2016-08-29
  */
-public class CreditNewsInfoActivity extends BeamBaseActivity {
+public class CreditKnowsInfoActivity extends BeamBaseActivity {
 
 
     @BindView(R.id.toolbar_title)
@@ -35,6 +35,6 @@ public class CreditNewsInfoActivity extends BeamBaseActivity {
 
     private void initToolbar() {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-        toolbarTitle.setText("新闻详情");
+        toolbarTitle.setText("动态详情");
     }
 }
