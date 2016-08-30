@@ -61,6 +61,8 @@
 
         <activity android:name=".module.main.knows.CreditKnowsInfoActivity" />
 
+        <activity android:name=".module.interact.CreditReportActivity" />
+
         <activity android:name=".module.login.LoginActivity" />
 
     </application>

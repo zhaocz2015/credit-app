@@ -1,27 +1,23 @@
 package com.wfzcx.credit.module.interact;
 
-import android.graphics.Color;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.jude.beam.bijection.BeamFragment;
-import com.jude.easyrecyclerview.EasyRecyclerView;
+import com.jude.beam.bijection.RequiresPresenter;
+import com.jude.beam.expansion.list.BeamListFragment;
+import com.jude.beam.expansion.list.ListConfig;
 import com.jude.easyrecyclerview.adapter.BaseViewHolder;
-import com.jude.easyrecyclerview.adapter.RecyclerArrayAdapter;
-import com.jude.easyrecyclerview.decoration.DividerDecoration;
-import com.jude.rollviewpager.Util;
-import com.jude.utils.JUtils;
 import com.wfzcx.credit.R;
+import com.wfzcx.credit.module.main.news.CreditNewsInfoActivity;
 import com.wfzcx.credit.ui.VerticalScrollTextSwicher;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -37,22 +33,18 @@ import butterknife.OnClick;
  * @email: zhaocz2015@163.com
  * @date: 2016-08-25
  */
-public class InteractFragment extends BeamFragment {
+@RequiresPresenter(InteractPresenter.class)
+public class InteractFragment extends BeamListFragment<InteractPresenter, Map> {
 
-    @BindView(R.id.toolbar_title)
-    TextView toolbarTitle;
+
     @BindView(R.id.toolbar)
     Toolbar toolbar;
+    @BindView(R.id.toolbar_title)
+    TextView toolbarTitle;
 
     @BindView(R.id.vsts_credit_notice)
     VerticalScrollTextSwicher noticeTxtSwitcher;
 
-    @BindView(R.id.recycler_notice)
-    EasyRecyclerView noticeRecycler;
-    @BindView(R.id.recycler_reply)
-    EasyRecyclerView replyRecycler;
-    @BindView(R.id.recycler_report)
-    EasyRecyclerView reportRecycler;
 
     private View rootView;
 
@@ -61,17 +53,30 @@ public class InteractFragment extends BeamFragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         if (rootView == null) {
-            rootView = inflater.inflate(R.layout.fragment_interact, container, false);
+            rootView = super.onCreateView(inflater, container, savedInstanceState);
             ButterKnife.bind(this, rootView);
 
             initToolbar();
             initNoticeTxtSwitcher();
-            initNoticeRecycelr();
-            initReplyRecycelr();
-            initReportRecycelr();
         }
 
+        ButterKnife.bind(this, rootView);
         return rootView;
+    }
+
+    @Override
+    public int getLayout() {
+        return R.layout.fragment_interact;
+    }
+
+    @Override
+    public ListConfig getConfig() {
+        return super.getConfig().setRefreshAble(true);
+    }
+
+    @Override
+    public BaseViewHolder<Map> getViewHolder(ViewGroup parent, int viewType) {
+        return new NoticeVHolder(parent);
     }
 
     private void initNoticeTxtSwitcher() {
@@ -88,150 +93,10 @@ public class InteractFragment extends BeamFragment {
             public void onClick(View view) {
                 VerticalScrollTextSwicher vsts = (VerticalScrollTextSwicher) view;
                 TextView tv = (TextView) vsts.getCurrentView();
-                JUtils.Toast(tv.getText().toString());
+//                JUtils.Toast(tv.getText().toString());
+                startActivity(new Intent(getContext(), CreditNewsInfoActivity.class));
             }
         });
-    }
-
-    private void initNoticeRecycelr() {
-        RecyclerArrayAdapter noticeAdapter = new RecyclerArrayAdapter(getContext()) {
-            @Override
-            public BaseViewHolder OnCreateViewHolder(ViewGroup parent, int viewType) {
-                return new NewsVHodler(parent);
-            }
-
-            class NewsVHodler extends BaseViewHolder<Map> {
-
-                public NewsVHodler(ViewGroup parent) {
-                    super(parent, R.layout.item_credit_news);
-                }
-
-                @Override
-                public void setData(Map data) {
-
-                }
-            }
-
-        };
-
-        noticeAdapter.setOnItemClickListener(position -> {
-            JUtils.Toast("信用要闻");
-        });
-
-        noticeRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
-        DividerDecoration itemDecoration = new DividerDecoration(Color.parseColor("#c7c7c7"), Util.dip2px(getContext(), 0.5f), 0, 0);
-        noticeRecycler.addItemDecoration(itemDecoration);
-        noticeRecycler.setAdapter(noticeAdapter);
-
-
-        List<Map> data = new ArrayList<Map>();
-
-        Map m1 = new HashMap();
-        Map m2 = new HashMap();
-        Map m3 = new HashMap();
-        Map m4 = new HashMap();
-        Map m5 = new HashMap();
-
-        data.add(m1);
-        data.add(m2);
-        data.add(m3);
-        data.add(m4);
-        data.add(m5);
-        noticeAdapter.addAll(data);
-    }
-
-    private void initReplyRecycelr() {
-        RecyclerArrayAdapter noticeAdapter = new RecyclerArrayAdapter(getContext()) {
-            @Override
-            public BaseViewHolder OnCreateViewHolder(ViewGroup parent, int viewType) {
-                return new NewsVHodler(parent);
-            }
-
-            class NewsVHodler extends BaseViewHolder<Map> {
-
-                public NewsVHodler(ViewGroup parent) {
-                    super(parent, R.layout.item_credit_news);
-                }
-
-                @Override
-                public void setData(Map data) {
-
-                }
-            }
-
-        };
-
-        noticeAdapter.setOnItemClickListener(position -> {
-            JUtils.Toast("信用要闻");
-        });
-
-        replyRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
-        DividerDecoration itemDecoration = new DividerDecoration(Color.parseColor("#c7c7c7"), Util.dip2px(getContext(), 0.5f), 0, 0);
-        replyRecycler.addItemDecoration(itemDecoration);
-        replyRecycler.setAdapter(noticeAdapter);
-
-
-        List<Map> data = new ArrayList<Map>();
-
-        Map m1 = new HashMap();
-        Map m2 = new HashMap();
-        Map m3 = new HashMap();
-        Map m4 = new HashMap();
-        Map m5 = new HashMap();
-
-        data.add(m1);
-        data.add(m2);
-        data.add(m3);
-        data.add(m4);
-        data.add(m5);
-        noticeAdapter.addAll(data);
-    }
-
-    private void initReportRecycelr() {
-        RecyclerArrayAdapter noticeAdapter = new RecyclerArrayAdapter(getContext()) {
-            @Override
-            public BaseViewHolder OnCreateViewHolder(ViewGroup parent, int viewType) {
-                return new NewsVHodler(parent);
-            }
-
-            class NewsVHodler extends BaseViewHolder<Map> {
-
-                public NewsVHodler(ViewGroup parent) {
-                    super(parent, R.layout.item_credit_news);
-                }
-
-                @Override
-                public void setData(Map data) {
-
-                }
-            }
-
-        };
-
-        noticeAdapter.setOnItemClickListener(position -> {
-            JUtils.Toast("信用要闻");
-        });
-
-        reportRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
-        DividerDecoration itemDecoration = new DividerDecoration(Color.parseColor("#c7c7c7"), Util.dip2px(getContext(), 0.5f), 0, 0);
-        reportRecycler.addItemDecoration(itemDecoration);
-        reportRecycler.setAdapter(noticeAdapter);
-
-
-        List<Map> data = new ArrayList<Map>();
-
-        Map m1 = new HashMap();
-        Map m2 = new HashMap();
-        Map m3 = new HashMap();
-        Map m4 = new HashMap();
-        Map m5 = new HashMap();
-
-        data.add(m1);
-        data.add(m2);
-        data.add(m3);
-        data.add(m4);
-        data.add(m5);
-        noticeAdapter.addAll(data);
     }
 
     private void initToolbar() {
@@ -239,15 +104,21 @@ public class InteractFragment extends BeamFragment {
         toolbarTitle.setText(R.string.main_tab_title_interact);
     }
 
-    @OnClick({R.id.ll_notice_more, R.id.ll_reply_more, R.id.ll_report_more})
+    @OnClick({R.id.ll_credit_rely, R.id.ll_credit_report, R.id.ll_leave_msg})
     public void onClick(View view) {
+        Intent intent = new Intent(getContext(), CreditReportActivity.class);
         switch (view.getId()) {
-            case R.id.ll_notice_more:
+            case R.id.ll_credit_rely:
+                intent.putExtra("title", "信用申诉");
                 break;
-            case R.id.ll_reply_more:
+            case R.id.ll_credit_report:
+                intent.putExtra("title", "举报投诉");
                 break;
-            case R.id.ll_report_more:
+            case R.id.ll_leave_msg:
+                intent.putExtra("title", "我要留言");
                 break;
         }
+
+        startActivity(intent);
     }
 }
