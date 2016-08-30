@@ -6,14 +6,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.jude.beam.bijection.BeamFragment;
-import com.jude.utils.JUtils;
+import com.jude.beam.bijection.RequiresPresenter;
+import com.jude.beam.expansion.list.BeamListFragment;
+import com.jude.beam.expansion.list.ListConfig;
+import com.jude.easyrecyclerview.adapter.BaseViewHolder;
 import com.wfzcx.credit.R;
 
-import butterknife.BindView;
+import java.util.Map;
+
 import butterknife.ButterKnife;
-import co.lujun.androidtagview.TagContainerLayout;
-import co.lujun.androidtagview.TagView;
 
 /**
  * Copyright (C) 2016
@@ -23,61 +24,38 @@ import co.lujun.androidtagview.TagView;
  * @email: zhaocz2015@163.com
  * @date: 2016-08-26
  */
-public class CreditInfoQryFragment extends BeamFragment {
+@RequiresPresenter(CreditInfoQryPresenter.class)
+public class CreditInfoQryFragment extends BeamListFragment<CreditInfoQryPresenter, Map> {
 
     private View rootView;
-
-    @BindView(R.id.tcl_key_words)
-    TagContainerLayout mTagContainerLayout;
-
-    @BindView(R.id.tcl_history_words)
-    TagContainerLayout histTagContainerLayout;
 
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         if (rootView == null) {
-            rootView = inflater.inflate(R.layout.fragment_credit_info_qry, container, false);
+            rootView = super.onCreateView(inflater, container, savedInstanceState);
             ButterKnife.bind(this, rootView);
 
-            initTagContainerLayout();
-            initHistTagContainerLayout();
         }
 
         return rootView;
     }
 
-    private void initTagContainerLayout() {
-
-        mTagContainerLayout.setTags(new String[]{"信用潍坊", "信用黑名单", "诚信企业", "信用曝光", "潍柴动力", "福田重工", "歌尔声学", "潍柴动力", "福田重工", "歌尔声学", "潍柴动力", "福田重工", "歌尔声学", "潍柴动力", "福田重工", "歌尔声学", "潍柴动力", "福田重工", "歌尔声学", "潍柴动力", "福田重工", "歌尔声学"});
-        mTagContainerLayout.setOnTagClickListener(new TagView.OnTagClickListener() {
-            @Override
-            public void onTagClick(int position, String text) {
-                JUtils.Toast(text);
-            }
-
-            @Override
-            public void onTagLongClick(int position, String text) {
-
-            }
-        });
+    @Override
+    public int getLayout() {
+        return R.layout.fragment_credit_info_qry;
     }
 
-    private void initHistTagContainerLayout() {
-
-        histTagContainerLayout.setTags(new String[]{"信用潍坊", "信用黑名单", "诚信企业", "信用曝光", "潍柴动力", "福田重工", "歌尔声学", "潍柴动力", "福田重工", "歌尔声学", "潍柴动力", "福田重工", "歌尔声学", "潍柴动力", "福田重工", "歌尔声学", "潍柴动力", "福田重工", "歌尔声学", "潍柴动力", "福田重工", "歌尔声学"});
-        histTagContainerLayout.setOnTagClickListener(new TagView.OnTagClickListener() {
-            @Override
-            public void onTagClick(int position, String text) {
-                JUtils.Toast(text);
-            }
-
-            @Override
-            public void onTagLongClick(int position, String text) {
-
-            }
-        });
+    @Override
+    public ListConfig getConfig() {
+        return super.getConfig().setRefreshAble(true);
     }
+
+    @Override
+    public BaseViewHolder<Map> getViewHolder(ViewGroup parent, int viewType) {
+        return new CreditInfoVHolder(parent);
+    }
+
 
 }

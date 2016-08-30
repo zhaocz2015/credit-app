@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#efefef"
     android:orientation="vertical">
 
     <!-- 信用查询 -->
@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:background="@color/white_efeff4">
 
-        <com.optimus.edittextfield.EditTextField
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
@@ -25,119 +25,10 @@
             android:maxLines="1"
             android:padding="6dp"
             android:textColorHint="@color/gray_c7"
-            android:textSize="14sp"
-            app:clearButtonMode="whileEditing" />
+            android:textSize="14sp" />
 
     </RelativeLayout>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:padding="8dp"
-                    android:text="热搜关键字"
-                    android:textColor="@color/red_dc1929" />
-
-                <TextView
-                    android:id="@+id/tv_service_refresh"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:drawableLeft="@drawable/ic_service_refresh"
-                    android:drawablePadding="2dp"
-                    android:paddingRight="8dp"
-                    android:paddingTop="4dp"
-                    android:text="换一批" />
-
-            </RelativeLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#ddd" />
-
-            <co.lujun.androidtagview.TagContainerLayout
-                android:id="@+id/tcl_key_words"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:padding="8dp"
-                app:container_background_color="@color/white"
-                app:container_border_radius="0dp"
-                app:container_enable_drag="false"
-                app:horizontal_interval="10dp"
-                app:tag_background_color="@color/blue_2196F3"
-                app:tag_clickable="true"
-                app:tag_text_color="@color/white"
-                app:tag_theme="random"
-                app:vertical_interval="10dp" />
-
-        </LinearLayout>
-
-    </ScrollView>
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:padding="8dp"
-                    android:text="搜索历史"
-                    android:textColor="@color/red_dc1929" />
-
-            </RelativeLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#ddd" />
-
-            <co.lujun.androidtagview.TagContainerLayout
-                android:id="@+id/tcl_history_words"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:padding="8dp"
-                app:container_background_color="@color/white"
-                app:container_border_radius="0dp"
-                app:container_enable_drag="false"
-                app:horizontal_interval="10dp"
-                app:tag_background_color="@color/blue_2196F3"
-                app:tag_clickable="true"
-                app:tag_text_color="@color/white"
-                app:tag_theme="random"
-                app:vertical_interval="10dp" />
-
-        </LinearLayout>
-
-    </ScrollView>
+    <include layout="@layout/include_recyclerview" />
 
 </LinearLayout>

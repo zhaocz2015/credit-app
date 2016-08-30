@@ -66,7 +66,7 @@ public class ServiceFragment extends BeamFragment {
         mViewPager.setOffscreenPageLimit(2);
         mViewPager.setAdapter(new FragmentPagerAdapter(getFragmentManager()) {
 
-            private String[] titles = {"信用查询", "资料查询"};
+            private String[] titles = {"信用查询", "信用知识"};
 
             @Override
             public Fragment getItem(int position) {
