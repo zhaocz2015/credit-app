@@ -30,6 +30,7 @@ import com.wfzcx.credit.module.main.knows.CreditKnowsListActivity;
 import com.wfzcx.credit.module.main.law.CreditLawsListActivity;
 import com.wfzcx.credit.module.main.news.CreditNewsInfoActivity;
 import com.wfzcx.credit.module.main.news.CreditNewsListActivity;
+import com.wfzcx.credit.module.main.pics.CreditNewsPicListActivity;
 import com.wfzcx.credit.module.main.trend.CreditTrendListActivity;
 
 import java.util.ArrayList;
@@ -316,7 +317,7 @@ public class Main4Fragment extends BeamFragment {
                 startActivity(new Intent(getContext(), CreditNewsListActivity.class));
                 break;
             case R.id.ll_credit_pics:
-                startActivity(new Intent(getContext(), CreditNewsListActivity.class));
+                startActivity(new Intent(getContext(), CreditNewsPicListActivity.class));
                 break;
             case R.id.ll_credit_knows:
                 startActivity(new Intent(getContext(), CreditKnowsListActivity.class));

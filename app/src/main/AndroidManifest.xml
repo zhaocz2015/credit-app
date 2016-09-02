@@ -63,6 +63,10 @@
 
         <activity android:name=".module.interact.CreditReportActivity" />
 
+        <activity android:name=".module.main.pics.CreditNewsPicListActivity" />
+
+        <activity android:name=".module.main.pics.CreditNewsPicInfoActivity" />
+
         <activity android:name=".module.login.LoginActivity" />
 
     </application>
