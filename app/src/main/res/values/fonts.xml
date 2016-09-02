@@ -116,5 +116,13 @@
     <!-- 融资信息 -->
     <string name="ic_rzxx">&#xe631;</string>
 
+    <!--更新版本-->
+    <string name="ic_check_version">&#xe637;</string>
+    <!--关于我们-->
+    <string name="ic_about_us">&#xe638;</string>
+
+    <!-- 举报 -->
+    <string name="ic_report">&#xe639;</string>
+
 
 </resources>

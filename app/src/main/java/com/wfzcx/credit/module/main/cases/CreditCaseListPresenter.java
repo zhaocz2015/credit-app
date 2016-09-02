@@ -3,12 +3,10 @@ package com.wfzcx.credit.module.main.cases;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 
+import com.alibaba.fastjson.JSON;
 import com.jude.beam.expansion.list.BeamListActivityPresenter;
 import com.wfzcx.credit.data.service.ErrorTransform;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import rx.Observable;
@@ -31,17 +29,27 @@ public class CreditCaseListPresenter extends BeamListActivityPresenter<CreditCas
 
     @Override
     public void onRefresh() {
-        List<Map> data = new ArrayList<>();
-
-        for (int i = 0; i < 15; i++) {
-            Map m1 = new HashMap<>();
-            m1.put("name", "123");
-            data.add(m1);
-        }
+        String tmpStr = "[{title:'奎文区失信联合惩戒典型案例', src:'坊子国税局', date: '2016-08-27'}," +
+                "{title:'高新区社会诚信典型案例', src:'潍坊税务总局', date: '2016-08-27'}," +
+                "{title:'滨海区失信联合惩戒典型案例', src:'工商行政管理总局', date: '2016-08-27'}," +
+                "{title:'经济开发区守信联合激励典型案例', src:'财政部网站', date: '2016-08-27'}," +
+                "{title:'潍城区失信联合惩戒型案例', src:'工商行政管理总局', date: '2016-08-27'}," +
+                "{title:'经济开发区守信联合激励典型案例', src:'财政部网站', date: '2016-08-27'}," +
+                "{title:'寒亭区区失信联合惩戒型案例', src:'工商行政管理总局', date: '2016-08-27'}," +
+                "{title:'经济开发区失信联合惩戒型案例', src:'财政部网站', date: '2016-08-27'}," +
+                "{title:'昌邑市失信联合惩戒型案例', src:'工商行政管理总局', date: '2016-08-27'}," +
+                "{title:'诸城市守信联合激励典型案例', src:'财政部网站', date: '2016-08-27'}," +
+                "{title:'昌乐县失信联合惩戒型案例', src:'工商行政管理总局', date: '2016-08-27'}," +
+                "{title:'安丘市守信联合激励典型案例', src:'财政部网站', date: '2016-08-27'}," +
+                "{title:'临朐县失信联合惩戒型案例', src:'工商行政管理总局', date: '2016-08-27'}," +
+                "{title:'经济开发区守信联合激励典型案例', src:'财政部网站', date: '2016-08-27'}," +
+                "{title:'安丘市失信联合惩戒典型案例', src:'中国新闻网', date: '2016-08-27'}," +
+                "{title:'《关于加强和推进济南市物流行业诚信体系建设的实施意见》解读 ',src:'坊子国税局',date:'2015-08-27'}" +
+                "]";
 
         try {
 
-            Observable.just(data)
+            Observable.just(JSON.parseArray(tmpStr, Map.class))
                     .compose(new ErrorTransform<>())
                     .unsafeSubscribe(getRefreshSubscriber());
         } catch (Exception e) {

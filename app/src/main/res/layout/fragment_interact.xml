@@ -96,7 +96,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:padding="8dp"
-                    android:text="@string/ic_main_complain_report"
+                    android:text="@string/ic_report"
                     android:textColor="@color/white"
                     android:textSize="24sp"
                     app:ct_backgroundColor="#60bb5a" />
@@ -125,7 +125,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:padding="8dp"
-                    android:text="@string/ic_main_notice_tip"
+                    android:text="@string/ic_main_complain_report"
                     android:textColor="@color/white"
                     android:textSize="24sp"
                     app:ct_backgroundColor="#43ddc3" />

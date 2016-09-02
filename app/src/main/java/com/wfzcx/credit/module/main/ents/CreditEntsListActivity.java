@@ -39,7 +39,7 @@ public class CreditEntsListActivity extends BeamListActivity<CreditEntsListPrese
 
     private void initToolbar() {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-        toolbarTitle.setText("企业列表");
+        toolbarTitle.setText(getIntent().getStringExtra("title"));
     }
 
     @Override

@@ -66,6 +66,9 @@ dependencies {
     // tag-view
     compile 'com.jude:tagview:2.1.5'
 
+    // fast-json
+    compile 'com.alibaba:fastjson:1.2.16'
+
     //material-drawer
 //    compile('com.mikepenz:materialdrawer:5.5.0@aar') {
 //        transitive = true

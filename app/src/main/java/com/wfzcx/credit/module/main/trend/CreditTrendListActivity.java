@@ -54,6 +54,6 @@ public class CreditTrendListActivity extends BeamListActivity<CreditTrendListPre
 
     @Override
     public ListConfig getConfig() {
-        return super.getConfig().setRefreshAble(true);
+        return super.getConfig().setRefreshAble(true).setNoMoreAble(false);
     }
 }

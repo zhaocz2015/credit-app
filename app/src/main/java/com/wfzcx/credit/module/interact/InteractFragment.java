@@ -80,10 +80,15 @@ public class InteractFragment extends BeamListFragment<InteractPresenter, Map> {
     }
 
     private void initNoticeTxtSwitcher() {
+
+        String tmpStr = "[{title:'关于公开征集“信用潍坊”标识（LOGO）的公告',src:'信用潍坊',date:'2016-08-27'}," +
+                "{title:'关于公布潍坊市创建社会信用体系建设试点示范城市（单位）（第一批）名单的通知',src:'省发展改革委',date:'2016-08-22'}," +
+                "{title:'信用潍坊行政许可和行政处罚信用信息公示报送系统模板下载公告',src:'信用潍坊',date:'2016-08-17'}";
+
         List<String> txts = new ArrayList<>();
-        txts.add("山东省社会信用体系建设联席会议办公室关于印发2016年山东省社会信用体系建设工作任务分工意见的通知");
-        txts.add("关于公开征集“信用威海”标识（LOGO）的公告");
-        txts.add("信用山东行政许可和行政处罚信用信息公示报送系统模板下载公告");
+        txts.add("关于公开征集“信用潍坊”标识（LOGO）的公告");
+        txts.add("关于公布潍坊市创建社会信用体系建设试点示范城市（单位）（第一批）名单的通知");
+        txts.add("信用潍坊行政许可和行政处罚信用信息公示报送系统模板下载公告");
 
         noticeTxtSwitcher.setTexts(txts);
         noticeTxtSwitcher.start();
@@ -94,7 +99,10 @@ public class InteractFragment extends BeamListFragment<InteractPresenter, Map> {
                 VerticalScrollTextSwicher vsts = (VerticalScrollTextSwicher) view;
                 TextView tv = (TextView) vsts.getCurrentView();
 //                JUtils.Toast(tv.getText().toString());
-                startActivity(new Intent(getContext(), CreditNewsInfoActivity.class));
+
+                Intent intent = new Intent(getContext(), CreditNewsInfoActivity.class);
+                intent.putExtra("info", "{title:'关于公开征集“信用潍坊”标识（LOGO）的公告',src:'信用潍坊',date:'2016-08-27'}");
+                getContext().startActivity(intent);
             }
         });
     }

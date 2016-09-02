@@ -24,6 +24,7 @@
 
 
         <TextView
+            android:id="@+id/tv_ent_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="潍坊银行股份有限公司"
@@ -35,6 +36,7 @@
             android:layout_marginTop="8dp">
 
             <TextView
+                android:id="@+id/tv_ent_user"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="石岳峰"
@@ -55,12 +57,14 @@
             android:layout_marginTop="8dp">
 
             <TextView
+                android:id="@+id/tv_ent_money"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1000万人民币"
                 android:textSize="12sp" />
 
             <TextView
+                android:id="@+id/tv_ent_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"

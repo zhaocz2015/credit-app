@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="@color/white"
     android:gravity="center_horizontal"
     android:padding="8dp">
 
-    <com.wfzcx.credit.ui.FontTextView
-        android:id="@+id/fiv_ents_tag"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ_ent_logo"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
         android:layout_centerHorizontal="true"
-        android:text="@string/ic_news_tag"
-        android:textColor="#58d56f"
-        android:textSize="42sp" />
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_ent_00"
+        app:civ_border_color="@color/gray_c7"
+        app:civ_border_width="0.5dp" />
 
     <TextView
+        android:id="@+id/tv_ent_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/fiv_ents_tag"
+        android:layout_below="@id/civ_ent_logo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="4dp"
         android:text="诚信企业" />

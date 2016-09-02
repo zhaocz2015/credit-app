@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#efefef"
@@ -18,14 +19,13 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:padding="5dp"
-            android:text="未登陆"
+            android:text="信用用户"
             android:textColor="@color/white"
             android:textSize="14sp" />
 
-        <ImageView
-            android:id="@+id/user_photo"
-            android:layout_width="88dp"
-            android:layout_height="88dp"
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="84dp"
+            android:layout_height="84dp"
             android:layout_above="@id/user_name"
             android:layout_centerHorizontal="true"
             android:scaleType="centerCrop"
@@ -37,6 +37,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:orientation="vertical">
 
 
@@ -47,9 +48,10 @@
             android:background="@drawable/shadow_top" />
 
         <LinearLayout
-            android:id="@+id/my_link_btn"
+            android:id="@+id/my_star_btn"
             android:layout_width="match_parent"
             android:layout_height="48dp"
+            android:background="@color/white"
             android:clickable="true"
             android:gravity="center_vertical"
             android:orientation="horizontal">
@@ -59,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
-                android:text="@string/ic_law_regula"
+                android:text="@string/ic_star"
                 android:textColor="#ed4f83"
                 android:textSize="18sp" />
 
@@ -130,9 +132,10 @@
 
 
         <LinearLayout
-            android:id="@+id/my_train_btn"
+            android:id="@+id/my_report_btn"
             android:layout_width="match_parent"
             android:layout_height="48dp"
+            android:background="@color/white"
             android:clickable="true"
             android:gravity="center_vertical"
             android:orientation="horizontal">
@@ -142,7 +145,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
-                android:text="@string/ic_law_regula"
+                android:text="@string/ic_main_credit_report"
                 android:textColor="#5959ed"
                 android:textSize="18sp" />
 
@@ -167,9 +170,10 @@
             android:background="@color/gray_c7" />
 
         <LinearLayout
-            android:id="@+id/my_star_btn"
+            android:id="@+id/my_update_btn"
             android:layout_width="match_parent"
             android:layout_height="48dp"
+            android:background="@color/white"
             android:clickable="true"
             android:gravity="center_vertical"
             android:orientation="horizontal">
@@ -179,7 +183,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
-                android:text="@string/ic_law_regula"
+                android:text="@string/ic_check_version"
                 android:textColor="#ea8010"
                 android:textSize="18sp" />
 
@@ -187,15 +191,15 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="我的举报" />
+                android:text="版本更新" />
 
-            <com.wfzcx.credit.ui.FontTextView
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="16dp"
-                android:text="@string/ic_view_more"
+                android:text="最新版本1.0"
                 android:textColor="@color/gray_c7"
-                android:textSize="18sp" />
+                android:textSize="12sp" />
         </LinearLayout>
 
         <View
@@ -204,19 +208,21 @@
             android:background="@color/gray_c7" />
 
         <LinearLayout
-            android:id="@+id/my_comment_btn"
+            android:id="@+id/my_settings_btn"
             android:layout_width="match_parent"
             android:layout_height="48dp"
+            android:background="@color/white"
             android:clickable="true"
             android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:visibility="gone">
 
             <com.wfzcx.credit.ui.FontTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
-                android:text="@string/ic_law_regula"
+                android:text="@string/ic_about_us"
                 android:textColor="#00bb9c"
                 android:textSize="18sp" />
 
@@ -241,9 +247,10 @@
             android:background="@color/gray_c7" />
 
         <LinearLayout
-            android:id="@+id/my_msg_btn"
+            android:id="@+id/my_info_btn"
             android:layout_width="match_parent"
             android:layout_height="48dp"
+            android:background="@color/white"
             android:clickable="true"
             android:gravity="center_vertical"
             android:orientation="horizontal">
@@ -303,7 +310,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
-                android:text="@string/ic_law_regula"
+                android:text="@string/ic_about_us"
                 android:textColor="#56abe4"
                 android:textSize="18sp" />
 
@@ -329,6 +336,16 @@
             android:background="@color/gray_c7" />
 
     </LinearLayout>
+
+    <com.jude.tagview.TAGView
+        android:id="@+id/btn_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:tag_padding_bottom="12dp"
+        app:tag_padding_top="12dp"
+        app:tag_text="退出登录"
+        app:tag_text_size="18sp" />
 
 
 </LinearLayout>

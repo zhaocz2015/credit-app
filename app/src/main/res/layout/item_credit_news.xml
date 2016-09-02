@@ -8,6 +8,7 @@
     android:padding="8dp">
 
     <TextView
+        android:id="@+id/tv_news_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ellipsize="end"
@@ -21,11 +22,13 @@
         android:layout_marginTop="8dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/tv_news_src"
+            android:layout_width="220dp"
             android:layout_height="wrap_content"
-            android:text="潍坊市社会信用建设联席会议办公室"
-            android:textSize="12sp"
-            android:visibility="gone" />
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="来源：潍坊市社会信用办公室"
+            android:textSize="12sp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -76,6 +79,7 @@
             </LinearLayout>
 
             <TextView
+                android:id="@+id/tv_news_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"

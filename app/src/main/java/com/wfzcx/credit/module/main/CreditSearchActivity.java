@@ -65,7 +65,9 @@ public class CreditSearchActivity extends BeamBaseActivity {
 
         tvSearchTxt.setOnEditorActionListener((textView, i, keyEvent) -> {
             if (i == EditorInfo.IME_ACTION_SEND || (keyEvent != null && keyEvent.getKeyCode() == KeyEvent.KEYCODE_ENTER)) {
-                startActivity(new Intent(CreditSearchActivity.this, CreditEntsListActivity.class));
+                Intent intent = new Intent(CreditSearchActivity.this, CreditEntsListActivity.class);
+                intent.putExtra("title", "搜索结果:" + textView.getText().toString());
+                startActivity(intent);
                 return true;
             }
             return false;
@@ -74,11 +76,13 @@ public class CreditSearchActivity extends BeamBaseActivity {
 
     private void initTagContainerLayout() {
 
-        mTagContainerLayout.setTags(new String[]{"信用潍坊", "信用黑名单", "诚信企业", "信用曝光", "潍柴动力", "信用曝光", "潍柴动力", "信用曝光", "潍柴动力", "信用曝光", "潍柴动力"});
+        mTagContainerLayout.setTags(new String[]{"潍坊软件", "软件公司", "潍柴动力", "高新企业", "歌尔声学", "潍坊银行", "人寿保险", "软件园", "潍坊发展公司"});
         mTagContainerLayout.setOnTagClickListener(new TagView.OnTagClickListener() {
             @Override
             public void onTagClick(int position, String text) {
-                startActivity(new Intent(CreditSearchActivity.this, CreditEntsListActivity.class));
+                Intent i = new Intent(CreditSearchActivity.this, CreditEntsListActivity.class);
+                i.putExtra("title", "搜索结果:" + text);
+                startActivity(i);
             }
 
             @Override
@@ -114,7 +118,10 @@ public class CreditSearchActivity extends BeamBaseActivity {
         };
 
         noticeAdapter.setOnItemClickListener(position -> {
-            startActivity(new Intent(CreditSearchActivity.this, CreditEntsListActivity.class));
+            Intent i = new Intent(CreditSearchActivity.this, CreditEntsListActivity.class);
+            Map tmp = (Map) noticeAdapter.getAllData().get(position);
+            i.putExtra("title", "搜索结果:" + tmp.get("hist"));
+            startActivity(i);
         });
 
         histRecycelr.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
@@ -125,11 +132,11 @@ public class CreditSearchActivity extends BeamBaseActivity {
         List<Map> data = new ArrayList<Map>();
 
         Map m1 = new HashMap();
-        m1.put("hist", "潍坊企业");
+        m1.put("hist", "潍坊软件");
         Map m2 = new HashMap();
-        m2.put("hist", "潍柴动力");
+        m2.put("hist", "高新软件");
         Map m3 = new HashMap();
-        m3.put("hist", "福田重工");
+        m3.put("hist", "软件公司");
         Map m4 = new HashMap();
         m4.put("hist", "歌尔声学");
         Map m5 = new HashMap();

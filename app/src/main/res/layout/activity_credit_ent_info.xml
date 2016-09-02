@@ -42,6 +42,7 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/tv_ent_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="潍坊银行股份有限公司"
@@ -157,6 +158,7 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tv_ent_user"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="石玉峰"
@@ -179,6 +181,7 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tv_ent_money"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="1000万人民币"
@@ -201,6 +204,7 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tv_ent_date"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="1997-08-15"

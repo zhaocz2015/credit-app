@@ -390,7 +390,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:padding="8dp"
-                    android:text="诚信企业TOP10" />
+                    android:text="诚信企业" />
 
                 <LinearLayout
                     android:id="@+id/ll_credit_ents_more"

@@ -1,15 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#efefef"
     android:orientation="vertical">
 
     <include layout="@layout/include_toolbar" />
 
-    <Button
-        android:id="@+id/btn_login"
-        android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="进入主页" />
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/main_input_round_shape"
+            android:hint="请输入用户名"
+            android:padding="8dp"
+            android:textColorHint="@color/gray_c7"
+            android:textSize="16sp" />
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/main_input_round_shape"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:padding="8dp"
+            android:textColorHint="@color/gray_c7"
+            android:textSize="16sp" />
+
+
+        <com.jude.tagview.TAGView
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:tag_padding_bottom="16dp"
+            app:tag_padding_top="16dp"
+            app:tag_text="登    录"
+            app:tag_text_size="18sp" />
+
+
+    </LinearLayout>
+
 
 </LinearLayout>
